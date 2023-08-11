@@ -767,7 +767,7 @@ footer {
 /* extra networks UI */
 
 .extra-network-cards{
-    height: 725px;
+    height: 440px;
     overflow: scroll;
     resize: vertical;
 }
@@ -861,8 +861,8 @@ footer {
 .extra-network-cards .card, .standalone-card-preview.card{
     display: inline-block;
     margin: 0.5rem;
-    width: 16rem;
-    height: 24rem;
+    width: 9rem;
+    height: 12rem;
     box-shadow: 0 0 5px rgba(128, 128, 128, 0.5);
     border-radius: 0.2rem;
     position: relative;
@@ -899,7 +899,7 @@ footer {
 }
 
 .extra-network-cards .card .actions .name{
-    font-size: 1.7em;
+    font-size: 1.0em;
     font-weight: bold;
     line-break: anywhere;
 }
@@ -908,7 +908,8 @@ footer {
     display: block;
     max-height: 3em;
     white-space: pre-wrap;
-    line-height: 1.1;
+    line-height: 1.0;
+    font-size: 0.8em;
 }
 
 .extra-network-cards .card .actions .description:hover {
