@@ -770,9 +770,22 @@ footer {
 /* extra networks UI */
 
 .extra-network-cards{
-    height: 440px;
+    height: 872px;
     overflow: scroll;
     resize: vertical;
+}
+
+/* スクロールバーの色を変更 */
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: #0b0f19;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #111827;
 }
 
 .extra-networks > div > [id *= '_extra_']{
