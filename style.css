@@ -263,7 +263,8 @@ button.custom-button{
 }
 
 #txt2img_generate, #img2img_generate {
-    min-height: 4.5em;
+    height: 1.7em;
+    flex-wrap: nowrap;
 }
 
 @media screen and (min-width: 2500px) {
@@ -299,10 +300,12 @@ button.custom-button{
     width: 50%;
     height: 100%;
     display: none;
-    background: #b4c0cc;
+    background: #4e4e4e;
+    font-size: inherit;
+    padding: inherit;
 }
 .gradio-button.generate-box-skip:hover, .gradio-button.generate-box-interrupt:hover{
-    background: #c2cfdb;
+    background: #5e5e5e;
 }
 .gradio-button.generate-box-interrupt{
     left: 0;
@@ -767,9 +770,22 @@ footer {
 /* extra networks UI */
 
 .extra-network-cards{
-    height: 725px;
+    height: 872px;
     overflow: scroll;
     resize: vertical;
+}
+
+/* スクロールバーの色を変更 */
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: #0b0f19;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #111827;
 }
 
 .extra-networks > div > [id *= '_extra_']{
@@ -861,8 +877,8 @@ footer {
 .extra-network-cards .card, .standalone-card-preview.card{
     display: inline-block;
     margin: 0.5rem;
-    width: 16rem;
-    height: 24rem;
+    width: 9rem;
+    height: 12rem;
     box-shadow: 0 0 5px rgba(128, 128, 128, 0.5);
     border-radius: 0.2rem;
     position: relative;
@@ -899,7 +915,7 @@ footer {
 }
 
 .extra-network-cards .card .actions .name{
-    font-size: 1.7em;
+    font-size: 1.0em;
     font-weight: bold;
     line-break: anywhere;
 }
@@ -908,7 +924,8 @@ footer {
     display: block;
     max-height: 3em;
     white-space: pre-wrap;
-    line-height: 1.1;
+    line-height: 1.0;
+    font-size: 0.8em;
 }
 
 .extra-network-cards .card .actions .description:hover {
