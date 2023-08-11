@@ -263,7 +263,8 @@ button.custom-button{
 }
 
 #txt2img_generate, #img2img_generate {
-    min-height: 4.5em;
+    height: 1.7em;
+    flex-wrap: nowrap;
 }
 
 @media screen and (min-width: 2500px) {
@@ -299,10 +300,12 @@ button.custom-button{
     width: 50%;
     height: 100%;
     display: none;
-    background: #b4c0cc;
+    background: #4e4e4e;
+    font-size: inherit;
+    padding: inherit;
 }
 .gradio-button.generate-box-skip:hover, .gradio-button.generate-box-interrupt:hover{
-    background: #c2cfdb;
+    background: #5e5e5e;
 }
 .gradio-button.generate-box-interrupt{
     left: 0;
