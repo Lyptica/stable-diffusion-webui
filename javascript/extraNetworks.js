@@ -16,12 +16,16 @@ function setupExtraNetworksForTab(tabname) {
     tabs.appendChild(sortOrder);
     tabs.appendChild(refresh);
 
+    /**
+     * ExtraNetworkの検索ボックスで文字列を検索する
+     * デフォルトとの差分: descriptionも検索対象に入れる
+     */
     var applyFilter = function() {
         var searchTerm = search.value.toLowerCase();
 
         gradioApp().querySelectorAll('#' + tabname + '_extra_tabs div.card').forEach(function(elem) {
             var searchOnly = elem.querySelector('.search_only');
-            var text = elem.querySelector('.name').textContent.toLowerCase() + " " + elem.querySelector('.search_term').textContent.toLowerCase();
+            var text = `${elem.querySelector('.name').textContent.toLowerCase()} ${elem.querySelector('.search_term').textContent.toLowerCase()} ${elem.querySelector('.description').textContent}`;
 
             var visible = text.indexOf(searchTerm) != -1;
 
