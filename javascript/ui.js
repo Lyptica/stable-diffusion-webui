@@ -28,10 +28,31 @@ function selected_gallery_button() {
     });
     return visibleCurrentButton;
 }
-
+  
+/**
+ * txt2imgのサムネイルを押した時のアクション
+ */
 function selected_gallery_index() {
     var buttons = all_gallery_buttons();
     var button = selected_gallery_button();
+
+    // 書き換え後のプレビュー画像のサイズ
+    const previewSize = "1024px";
+
+    // プレビュー画像のサイズを広げる
+    const txt2imgGalleryPreviewImage = Array.from(gradioApp()?.querySelectorAll('#txt2img_gallery > div.preview'))
+        .filter(element => /svelte-.*/.test(element?.classList?.value))?.[0];
+
+    if(txt2imgGalleryPreviewImage){
+        txt2imgGalleryPreviewImage.style.minHeight = previewSize;
+    }
+
+    // プレビュー画像の外枠のサイズも広げる
+    const txt2imgGalleryPreviewOuterFrame = gradioApp()?.querySelectorAll('#txt2img_gallery')?.[0];
+
+    if(txt2imgGalleryPreviewOuterFrame){
+        txt2imgGalleryPreviewOuterFrame.style.minHeight = previewSize;
+    }
 
     var result = -1;
     buttons.forEach(function(v, i) {
